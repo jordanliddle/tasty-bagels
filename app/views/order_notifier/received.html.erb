@@ -1,0 +1,11 @@
+Dear <%= @order.name %>
+
+Thank you kindly for ordering from TastyBagel, your neighborhood bagel shop! 
+
+Here's a little overview of your order:
+
+<%= render @order.line_items -%>
+
+We'll send you another e-email shortly when you order is sent out.
+
+
