@@ -21,4 +21,5 @@ class OrderNotifier < ActionMailer::Base
     @order = order
 
     mail to: order.email, subject: "Your food is en route!"
+  end
 end
