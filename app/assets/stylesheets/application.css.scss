@@ -12,7 +12,11 @@
  *
  *= require_tree .
  *= require_self
+
  */
+
+// @import "bootstrap-sprockets"; // Bootstrap functionality available when ready
+// @import "bootstrap";
 
 #banner {
 	background: #9c9;
