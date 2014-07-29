@@ -19,24 +19,38 @@
 		min-height: 100px;
 		
 		img {
-			width: 80px;
+			width: 120px;
+			height: 120px;
 			margin-right: 5px;
 			margin-bottom: 5px;
 			position: absolute;
+			border-radius: 150px;
+			-webkit-border-radius: 150px;
+			-moz-border-radius: 150px;
 		}
 		
 		h3 {
-			font-size: 120%;
-			font-family: sans-serif;
-			margin-left: 100px;
+			font-family: 'chunkfive-webfont', sans-serif;
+  		font-size: 180%;
+  		//text-shadow: 1px 1px 1px #aaa;
+			margin-left: 150px;
 			margin-top: 0;
 			margin-bottom: 2px;
 			color: #227;
+				
+				.price {
+					font-size: 60%;
+					margin-left: 20px;
+					display: inline;
+					color: #44a;
+					font-weight: bold;
+					margin-right: 3em;
+				}
 		}
 		
 		p, div.price_line {
-			margin-left: 100px;
-			margin-top: 0.5em;
+			margin-left: 150px;
+			margin-top: 1.2em;
 			margin-bottom: 0.8em;
 			
 			form, div {
@@ -44,10 +58,5 @@
 			}
 		}
 		
-		.price {
-			color: #44a;
-			font-weight: bold;
-			margin-right: 3em;
-		}
 	}
 }
