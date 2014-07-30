@@ -2,12 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Custom Colors */
+$earthgreen: #868364;
+$beige: #F4F0C0;
+$tan: #E2C26F;
+$coffeeorange: #B7641E;
+$burgandy: #69290D;
+
+
 .store {
+
 	h1 {
 		margin: 0;
 		padding-bottom: 0.5em;
 		font: 150% sans-serif;
-		color: #226;
+		color: $earthgreen;
 		border-bottom: 3px dotted #77d;
 	}
 	
@@ -17,6 +26,7 @@
 		margin-top: 1em;
 		border-bottom: 1px dotted #77d;
 		min-height: 100px;
+		margin-left: 25px;
 		
 		img {
 			width: 120px;
@@ -36,13 +46,13 @@
 			margin-left: 150px;
 			margin-top: 0;
 			margin-bottom: 2px;
-			color: #227;
+			color: $coffeeorange;
 				
 				.price {
 					font-size: 60%;
 					margin-left: 20px;
 					display: inline;
-					color: #44a;
+					color: $tan;
 					font-weight: bold;
 					margin-right: 3em;
 				}
@@ -50,11 +60,16 @@
 		
 		p, div.price_line {
 			margin-left: 150px;
-			margin-top: 1.2em;
+			margin-top: 1.5em;
 			margin-bottom: 0.8em;
 			
 			form, div {
 				display: inline;
+			}
+			
+			.btn {
+				color: white;
+				font-family: 'chunkfive-webfont', sans-serif;
 			}
 		}
 		

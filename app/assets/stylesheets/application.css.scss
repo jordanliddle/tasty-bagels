@@ -18,6 +18,22 @@
 @import "bootstrap-sprockets"; // Bootstrap functionality available when ready
 @import "bootstrap";
 @import "font-awesome";
+@import "rails_bootstrap_forms";
+@import url(http://weloveiconfonts.com/api/?family=fontelico);
+
+/* fontelico */
+[class*="fontelico-"]:before {
+  font-family: 'fontelico', sans-serif;
+}
+
+/* Custom Colors */
+$earthgreen: #868364;
+$beige: #F4F0C0;
+$tan: #E2C26F;
+$coffeeorange: #B7641E;
+$burgandy: #69290D;
+
+
 
  @font-face {
 font-family: 'chunkfive-webfont';
@@ -33,46 +49,41 @@ font-style: normal;
 
 
 #banner {
-	height: 350px;
-	//background:
-	//	url('bagel.jpg') no-repeat 80% 50%,
-	//	url('bagelbackground.jpg') no-repeat;
-	background-size: 10%, cover;
-	//-webkit-filter: blur(1px);
+	height: 400px;
+	background-image: url('bagelback.jpg');
+	background-size: 100%, cover;
 	padding: 10px;
 	border: 10px;
 	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
-	color: #282;
 	text-align: center;
 
 	#heading {
 		font-family: 'chunkfive-webfont', sans-serif;
   	font-size: 100%;
-		margin: 0px;
-		padding-bottom: 0.5em;
-		color: #222277;
+		margin: 40px;
+		padding-bottom: 0.0em;
+		color: white;
 		border-bottom: none;
 		text-align: center;
 	}
 
 	#subheading {
-		font-size: 60%;
-		color: black;
+		font-size: 45%;
+		font-weight: bold;
+		color: $burgandy;
 		display: block;
-		font-family: 'Hevetica';
+		font-family: 'Verdana', sans-serif
 	}
 
 	#process {
-		border: 1px;
-
 		i {
-			color: #454545;
-			margin: 40px 20px;
+			color: $tan;
+			margin: 0px 20px;
 			
 
 			.fasubhead {
-				color: #4444aa;
+				color: $beige;
 				font-family: 'chunkfive-webfont', sans-serif;
 				font-size: 50%;
 				margin: 10px;
@@ -81,43 +92,50 @@ font-style: normal;
 		}
 
 		.fa-chevron-right {
+			color: white;
 			position: relative;
 			bottom: 30px;
 			font-size: 60%;
+		}
+
+
+		/* Grow */
+		.grow {
+  		display: inline-block;
+  		-webkit-transition-duration: 0.3s;
+  		transition-duration: 0.3s;
+  		-webkit-transition-property: transform;
+  		transition-property: transform;
+  		-webkit-transform: translateZ(0);
+  		transform: translateZ(0);
+  		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+		}
+		
+		.grow:hover, .grow:focus, .grow:active {
+  		-webkit-transform: scale(1.1);
+  		transform: scale(1.1);
 		}
 	}
 	
 	img {
 		float: center;
-	}
-
-	
+	}	
 }
 
-/* #notice {
-	color: #000 !important;
-	border: 2px solid red;
-	padding: 1em;
-	margin-bottom: 2em;
-	background-color: #f0f0f0;
-	font: bold smaller sans-serif;
-} */
-
 #columns {
-	background: #141;
-	
+	background: white;
+
 	#main {
 		margin-left: 17em;
 		padding: 1em;
 		background: white;
-		
 	}
 	
 	#side {
 		float: left;
-		padding: 1em 2em;
-		width: 13em;
-		background: #141;
+		padding: 2em 2em;
+		width: 18em;
+		background: $earthgreen;
 		
 		form, div {
 			display: inline;
@@ -130,20 +148,47 @@ font-style: normal;
 		#cart {
 			font-size: smaller;
 			color: white;
-			
+
+			.cart_title { 
+    		color: white;
+    		font-family: 'chunkfive-webfont', sans-serif;
+    		text-align: left;
+				font-size: 175%;	
+  		}
+
+  		.item_price, .total_line {
+  			padding: 0.5em 0.5em;
+				text-align: right;
+   			color: white;
+			}
+	
+			.total_line, .total_cell {
+				font-weight: bold;
+				border-top: 1px solid #595;
+				border-color: $beige;
+			}
+		
+			.btn {
+				margin-top: 0.5em;
+				margin-right: 1em;
+			}
+
 			table {
-				border-top: 1px dotted #595;
-				border-bottom: 1px dotted #595;
+				color: $beige;
+				margin-top: 20px;
 				margin-bottom: 10px;
+				border-bottom: 1px solid #595;
+				border-color: $beige;
 			}
 		}
 		
 		ul {
 			padding: 0;
+			margin-top: 40px;
 			li {
 				list-style: none;
 				a {
-					color: #bfb;
+					color: white;
 					font-size: small;
 				}
 			}
@@ -152,32 +197,16 @@ font-style: normal;
 }
 		.tasty_bagel_form {
 			fieldset {
-				background: #efe;
+				width: 400px;
+				margin: 20px 0px 0px 40px;
+
 
 				legend {
-					color: #dfd;	
-					background: #141;
-					font-family: sans-serif;
-					padding: 0.2em 1em;
-				}
-			}
-
-			form {
-				label {
-					width: 5em;
-					float: left;	
-					text-align: right;
-					padding-top: 0.2em;
-					margin-right: 0.1em;
-					display: block;
-				}
-
-				select, textarea, input {
-					margin-left: 4em;
-				}
-
-				br {
-					display: none
+					font-family: 'chunkfive-webfont', sans-serif;
+  				line-height: 35px;
+  				font-size: 21px;
+  				font-weight: 300;
+  				color: #aaa;
 				}
 			}
 		}
