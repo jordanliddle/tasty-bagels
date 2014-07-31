@@ -7,7 +7,7 @@
 	<% @products.each do |p| %>
 		<% cache ['entry', p] do %>
 			<div class="entry">
-				<%= image_tag(p.image_url) %>
+				<%= image_tag(p.list_image) %>
 				<h3><%= p.title %>
 				<span class="price">// <%= number_to_currency(p.price) %></span></h3>
 				<%= sanitize(p.description) %>

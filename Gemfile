@@ -12,6 +12,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap_form'
 
+# Use paperclip for easy file attachment
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
