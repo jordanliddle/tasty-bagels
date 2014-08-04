@@ -1,5 +1,7 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
+<% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+              <%= value %>
+        </div>
 <% end %>
 
 
