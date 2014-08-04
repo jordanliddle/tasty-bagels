@@ -30,3 +30,12 @@ will!
 			</p>},
   image_url: 'tuna.jpg',
   price: 3.95)
+# . . .
+
+Product.create!(title: 'Smoked Salmon',
+  description: 
+    %{<p>
+       Smokey homegrown salmon sandwiched between a fresh baked bagel garnished with cream cheese and a twig of dill.
+      </p>},
+  image_url: 'salmon.jpg',
+  price: 5.95)
