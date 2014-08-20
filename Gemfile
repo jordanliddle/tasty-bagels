@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap_form'
+gem 'haml', '~> 4.0.5'
 
 # Use paperclip for easy file attachment
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
