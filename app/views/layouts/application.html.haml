@@ -32,13 +32,10 @@
                 = render @cart
           %ul
             %li
-              %a{:href => "#"} Home
+              %a{:href => '/'} Home
             %li
-              %a{:href => "#"} Our Sandwiches
-            %li
-              %a{:href => "#"} History
-            %li
-              %a{:href => "#"} Contact
+              %a{:href => '/login'} Login
+            
 
           - if session[:user_id]
             %ul

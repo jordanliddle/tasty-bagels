@@ -14,10 +14,12 @@ TastyBagel is a sandwich ordering service I built using the [Bootstrap](http://g
 * **Asset Pipeline** 
 
 
-In addition to gaining a deeper understanding of Rails, I also exercised some front-end development using Bootstrap, SASS, jQuery and other technologies. 
+In addition to gaining a deeper understanding of Rails, I also exercised some front-end development using Bootstrap, SASS, jQuery, HAML and other technologies. 
 
 
-To see TastyBagel live, click [here](#) 
+To see TastyBagel live, click [here](http://fierce-retreat-5723.herokuapp.com/) and use login details: 
+Name: Demo User
+Password: 12345 
 
 
 Thanks for checking out my work! 
