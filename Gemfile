@@ -35,8 +35,18 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :develpment do 
 	gem 'spring'
+end
+
+group :test do
+	gem 'capybara', '~> 2.5'
+  	gem 'capybara-slow_finder_errors'
+ 	gem 'capybara-screenshot'
+end
+
+group :test, :develpment do
 	gem 'minitest-reporters'
 end
+
 gem 'pry-rails', :group => :development
 
 
