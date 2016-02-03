@@ -2,13 +2,14 @@ require 'test_helper'
 
 class UserStoriesTest < ActionDispatch::IntegrationTest
   fixtures :products
+  fixtures :users
 
   # A user goes to the index page. They select a product, adding it to their
   # cart, and check out, filling in their details on the checkout form. When
   # they submit, an order is created containing their information, along with a
   # single line item corresponding to the product they added to their cart.
   
-  test "buying a product" do
+  test "buying a product not logged in" do
     LineItem.delete_all
     Order.delete_all
     sandwich = products(:valid_sandwich)
@@ -17,16 +18,19 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_template "index"
     
-    xml_http_request :post, '/line_items', product_id: tasty_bagel.id
+    xml_http_request :post, '/line_items', product_id: products(:one).id
     assert_response :success 
     
     cart = Cart.find(session[:cart_id])
     assert_equal 1, cart.line_items.size
-    assert_equal tasty_bagel, cart.line_items[0].product
+    assert_equal products(:one), cart.line_items[0].product
     
     get "/orders/new"
+    assert_equal 'Please log in', flash[:notice]
+    post_via_redirect "/login", name: users(:one).name, password: 'secret'
+    get "/orders/new"
     assert_response :success
-    assert_template "new"
+    
     
     post_via_redirect "/orders",
                       order: { name:     "Foo Bar",
@@ -49,11 +53,6 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     
     assert_equal 1, order.line_items.size
     line_item = order.line_items[0]
-    assert_equal tasty_bagel, line_item.product
-
-    mail = ActionMailer::Base.deliveries.last
-    assert_equal ["jrdnliddle@example.com"], mail.to
-    assert_equal 'Jordan Liddle <tastybagel@example.com>', mail[:from].value
-    assert_equal "TastyBagel Order Confirmation", mail.subject
+    assert_equal products(:one), line_item.product
   end
 end

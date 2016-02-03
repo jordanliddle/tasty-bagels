@@ -42,4 +42,8 @@ SandwichShop::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Paperclip config:
+  Paperclip.options[:image_magick_path] = "/opt/ImageMagick/bin"
+  Paperclip.options[:command_path] = "/opt/ImageMagick/bin"
 end

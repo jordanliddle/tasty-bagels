@@ -6,7 +6,7 @@ Product.create!(title: 'Ham and Cheese',
         The classic ham and cheese sandwich contains two fresh slices of Grade-A italian nested
         between a fresh layer of crisp lettuce and a warm slice of swiss cheese.
       </p>},
-  image_url:   'hamcheese.jpg',    
+  image_url:   '14239_l.jpg',    
   price: 3.45)
 # . . .
 Product.create!(title: 'BLT',
@@ -16,7 +16,7 @@ Product.create!(title: 'BLT',
         perfect crisp and layered on top of salted garden tomatoes and a mix of fresh crisp
         lettuce and mayonnaise. This one is destined to please the crowd.
       </p>},
-  image_url: 'blt.jpg',
+  image_url: 'h14239_l.jpg',
   price: 4.95)
 # . . .
 
@@ -28,7 +28,7 @@ baguette with the perfect proportions of tuna, mayonnaise, onion and our very ow
 your tastebuds don't pursuade you to make this sandwich a weekly tradition, we're not sure what
 will!
 			</p>},
-  image_url: 'tuna.jpg',
+  image_url: 'http://www.taste.com.au/images/recipes/sfi/2006/10/14239_l.jpg',
   price: 3.95)
 # . . .
 
@@ -37,5 +37,5 @@ Product.create!(title: 'Smoked Salmon',
     %{<p>
        Smokey homegrown salmon sandwiched between a fresh baked bagel garnished with cream cheese and a twig of dill.
       </p>},
-  image_url: 'salmon.jpg',
+  image_url: '14239_l.jpg',
   price: 5.95)
