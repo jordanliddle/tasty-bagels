@@ -1,11 +1,14 @@
 class OrderNotifier < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "orders@tastybagel.com"
+  layout 'mailer'
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.order_notifier.received.subject
-  #
+  def account_sign_up_notification(user)
+    @user = user
+    @url = 'http://something.com/login'
+    mail(to: @user.email, subject: 'Welcome to TastyBagel Bitch!')
+  end
+
+
   def received(order)
     @order = order
 

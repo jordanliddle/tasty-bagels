@@ -13,8 +13,8 @@ two:
   price: 9.99
 
 valid_sandwich: 
-  title: Peanut Butter and Jelly
-  description: Peanut Butter and Jelly sandwich may as well be the grandfather of all sandwiches. Not a favorite in European culture but its decadent mixture of both the butter of peanuts and natural berry jam makes it an all time favorite here in North America.
+  title: "Peanut Butter and Jelly"
+  description: "Peanut Butter and Jelly sandwich may as well be the grandfather of all sandwiches. Not a favorite in European culture but its decadent mixture of both the butter of peanuts and natural berry jam makes it an all time favorite here in North America."
   price: 2.49
   image_url: pbj.jpg
 

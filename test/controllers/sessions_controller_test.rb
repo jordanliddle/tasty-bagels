@@ -10,7 +10,7 @@ class SessionsControllerTest < ActionController::TestCase
     foo = users(:one)
     post :create, name: foo.name, password: 'secret'
     assert_redirected_to admin_url
-    assert_equal dave.id, session[:user_id]
+    assert_equal foo.id, session[:user_id]
   end
 
   test "should fail login" do

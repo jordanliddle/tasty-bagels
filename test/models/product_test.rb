@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
-	fixtures :products
+  fixtures :products
 	
   test "product attribtues must not be empty" do
 		product = Product.new
@@ -10,7 +10,6 @@ class ProductTest < ActiveSupport::TestCase
 		assert product.errors[:title].any?, "#{error_message}"
 		assert product.errors[:description].any?, "#{error_message}"
 		assert product.errors[:price].any?, "#{error_message}"
-		assert product.errors[:image_url].any?, "#{error_message}"
 	end
 	
 	test "product price must be positive" do
@@ -35,7 +34,7 @@ class ProductTest < ActiveSupport::TestCase
 	
 	test "image url" do
 		ok = %w{ foo.gif foo.jpg foo.png FOO.JPG FOO.Jpg http://a.b.c/x/y/z/foo.gif }
-		bad = %w{ foo.doc foo.gif/more foo.gif.more }
+		bad = %w{ foo.doc foo.pdf foo.xyz }
 		
 		ok.each do |name|
 			assert new_product(name).valid?, "#{name} should be valid."

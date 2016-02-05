@@ -14,6 +14,7 @@ class CartsControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_not_nil assigns(:cart)
   end
 
   test "should create cart" do
@@ -45,6 +46,6 @@ class CartsControllerTest < ActionController::TestCase
       delete :destroy, id: @cart
     end
 
-    assert_redirected_to carts_path
+    assert_redirected_to '/'
   end
 end
