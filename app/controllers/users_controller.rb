@@ -28,8 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        # Tell the UserMailer to send a welcome email after save
-        OrderNotifier.ccount_sign_up_notification(@user).deliver_later
+
         format.html { redirect_to user_url(@user), notice: "User #{@user.name} was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
